@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jared K. Slone - Portfolio</title>
-    <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for Icons (LinkedIn, Google Scholar, Envelope, etc.) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>
@@ -24,7 +22,6 @@
 </head>
 <body class="bg-gray-50 text-slate-800 font-sans leading-relaxed">
 
-    <!-- Navigation -->
     <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
@@ -35,7 +32,6 @@
                     <a href="#publications" class="text-slate-600 hover:text-primary transition">Publications</a>
                     <a href="#contact" class="text-slate-600 hover:text-primary transition">Contact</a>
                 </div>
-                <!-- Mobile menu button placeholder (simple layout) -->
                 <a href="#contact" class="md:hidden text-slate-600">
                     <i class="fas fa-envelope"></i>
                 </a>
@@ -43,30 +39,25 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header id="about" class="bg-white pt-20 pb-16">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-10">
-            <!-- Profile Image Placeholder -->
             <div class="w-40 h-40 md:w-56 md:h-56 relative shrink-0">
                 <div class="absolute inset-0 bg-gradient-to-tr from-blue-100 to-indigo-100 rounded-full animate-pulse"></div>
-                <!-- Replace src below with your actual photo path like 'assets/me.jpg' -->
-                <img src="https://placehold.co/400x400/e2e8f0/475569?text=Your+Photo" 
+                <img src="https://placehold.co/400x400/e2e8f0/475569?text=Jared+Slone" 
                      alt="Profile Photo" 
                      class="relative w-full h-full rounded-full object-cover border-4 border-white shadow-lg">
             </div>
 
-            <!-- Intro Text -->
             <div class="text-center md:text-left">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
                     <span class="text-primary">Jared K. Slone</span>
                 </h1>
                 <p class="text-xl text-slate-600 mb-6 max-w-2xl">
-                    Researcher / Developer / Scientist based in Houston. I specialize in structural bioinformatis and I am passionate about using mathematics and machine learning to solve difficult problems in biology.
+                    Researcher / Developer / Scientist based in Houston. I specialize in structural bioinformatics and I am passionate about using mathematics and machine learning to solve difficult problems in biology.
                 </p>
                 
-                <!-- Social Links -->
                 <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="js201@rice.edu" target="_blank" class="px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-700 transition flex items-center gap-2">
+                    <a href="mailto:js201@rice.edu" class="px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-700 transition flex items-center gap-2">
                         <i class="fas fa-envelope"></i> Email Me
                     </a>
                     <a href="https://www.linkedin.com/in/jared-slone" target="_blank" class="px-5 py-2.5 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition flex items-center gap-2 border border-blue-100">
@@ -80,7 +71,6 @@
         </div>
     </header>
 
-    <!-- Projects Section -->
     <section id="projects" class="py-16 bg-gray-50">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
@@ -89,23 +79,20 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Project Card 1 -->
                 <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition border border-slate-100">
-                    <!-- Project Figure / Image -->
                     <div class="h-48 bg-slate-200 overflow-hidden relative group">
-                        <!-- Replace src with your project screenshot -->
-                        <img src="https://placehold.co/800x400/f1f5f9/475569?text=Project+Figure+1" 
-                             alt="Project 1" 
+                        <img src="https://placehold.co/800x400/f1f5f9/475569?text=STAG-LLM" 
+                             alt="STAG-LLM Project" 
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Project Title One</h3>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">STAG-LLM</h3>
                         <p class="text-slate-600 mb-4 line-clamp-3">
-                            A brief summary of your project goes here. Explain the problem you solved, the technologies you used (e.g., Python, React, TensorFlow), and the outcome.
+                            A novel framework predicting TCR-pHLA binding by combining protein language models with computationally generated 3D structures.
                         </p>
                         <div class="flex gap-2 mb-4">
                             <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded">Python</span>
-                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Data Viz</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Machine Learning</span>
                         </div>
                         <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
                             View Project <i class="fas fa-arrow-right ml-1 text-sm"></i>
@@ -113,42 +100,20 @@
                     </div>
                 </article>
 
-                <!-- Project Card 2 -->
                 <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition border border-slate-100">
                     <div class="h-48 bg-slate-200 overflow-hidden relative group">
-                        <img src="https://placehold.co/800x400/e2e8f0/475569?text=Project+Figure+2" 
-                             alt="Project 2" 
+                        <img src="https://placehold.co/800x400/e2e8f0/475569?text=PepSim" 
+                             alt="PepSim Project" 
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Project Title Two</h3>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">PepSim</h3>
                         <p class="text-slate-600 mb-4 line-clamp-3">
-                            Another cool project. Maybe this one is about machine learning or web development. Keep the summary punchy and focused on impact.
+                             A computational method for T-cell cross-reactivity prediction via comparison of peptide sequence and peptide-HLA structure.
                         </p>
                         <div class="flex gap-2 mb-4">
-                            <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded">React</span>
-                            <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs font-semibold rounded">Firebase</span>
-                        </div>
-                        <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-                            View Project <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Project Card 3 -->
-                <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition border border-slate-100">
-                    <div class="h-48 bg-slate-200 overflow-hidden relative group">
-                        <img src="https://placehold.co/800x400/f8fafc/475569?text=Project+Figure+3" 
-                             alt="Project 3" 
-                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Project Title Three</h3>
-                        <p class="text-slate-600 mb-4 line-clamp-3">
-                            Description for a third project. You can duplicate this HTML block to add as many projects as you need.
-                        </p>
-                        <div class="flex gap-2 mb-4">
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded">Research</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded">Structural Bio</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs font-semibold rounded">Immunology</span>
                         </div>
                         <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
                             View Project <i class="fas fa-arrow-right ml-1 text-sm"></i>
@@ -160,7 +125,6 @@
         </div>
     </section>
 
-    <!-- Publications Section -->
     <section id="publications" class="py-16 bg-white border-t border-slate-200">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
@@ -169,42 +133,72 @@
             
             <div class="space-y-6">
                 
-                <!-- Publication Item 1 -->
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <div class="sm:w-32 shrink-0 text-sm font-bold text-slate-400">2024</div>
+                    <div class="sm:w-32 shrink-0 text-sm font-bold text-slate-400">2025</div>
                     <div>
                         <h4 class="text-lg font-bold text-slate-900">
-                            The Title of Your Recent Paper or Article
+                            STAG-LLM: Predicting TCR-pHLA binding with protein language models and computationally generated 3D structures
                         </h4>
                         <p class="text-slate-600">
-                            <u>Your Name</u>, Co-author Name, and Advisor Name.
+                            <u>Jared K. Slone</u>, Minying Zhang, Peixin Jiang, Amanda Montoya, Emily Bontekoe, Barbara Nassif Rausseo, Alexandre Reuben, Lydia E. Kavraki.
                         </p>
                         <p class="text-slate-500 text-sm italic mb-2">
-                            Proceedings of the International Conference on Cool Stuff (ICCS)
+                            Computational and Structural Biotechnology Journal, Vol 27.
                         </p>
                         <div class="flex gap-3">
-                            <a href="#" class="text-sm text-primary hover:underline"><i class="far fa-file-pdf"></i> PDF</a>
-                            <a href="#" class="text-sm text-primary hover:underline"><i class="fas fa-link"></i> Publisher Link</a>
+                            <a href="https://doi.org/10.1016/j.csbj.2025.09.004" target="_blank" class="text-sm text-primary hover:underline"><i class="fas fa-link"></i> Publisher Link</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Publication Item 2 -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <div class="sm:w-32 shrink-0 text-sm font-bold text-slate-400">2025</div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900">
+                            TCR-pMHC Binding Specificity Prediction from Structure Using Graph Neural Networks
+                        </h4>
+                        <p class="text-slate-600">
+                            <u>Jared K. Slone</u>, Anja Conev, Maurício Menegatti Rigo, Alexandre Reuben, Lydia E. Kavraki.
+                        </p>
+                        <p class="text-slate-500 text-sm italic mb-2">
+                            IEEE Transactions on Computational Biology and Bioinformatics.
+                        </p>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-sm text-primary hover:underline"><i class="fas fa-link"></i> Link</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="flex flex-col sm:flex-row gap-4">
                     <div class="sm:w-32 shrink-0 text-sm font-bold text-slate-400">2023</div>
                     <div>
                         <h4 class="text-lg font-bold text-slate-900">
-                            Another Significant Publication Title
+                            PepSim: T-cell cross-reactivity prediction via comparison of peptide sequence and peptide-HLA structure
                         </h4>
                         <p class="text-slate-600">
-                            Co-author Name and <u>Your Name</u>.
+                            Sarah Hall-Swan, <u>Jared Slone</u>, Maurício Menegatti Rigo, Dinler A. Antunes, Gregory Lizée, Lydia E. Kavraki.
                         </p>
                         <p class="text-slate-500 text-sm italic mb-2">
-                            Journal of Big Scientific Discoveries, Vol 42.
+                            Frontiers in Immunology, Vol 14.
                         </p>
                         <div class="flex gap-3">
-                            <a href="#" class="text-sm text-primary hover:underline"><i class="far fa-file-pdf"></i> PDF</a>
+                            <a href="https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2023.1108303/full" target="_blank" class="text-sm text-primary hover:underline"><i class="fas fa-link"></i> Publisher Link</a>
                         </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <div class="sm:w-32 shrink-0 text-sm font-bold text-slate-400">2021</div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900">
+                            Using generative adversarial networks to produce knots with specified invariants
+                        </h4>
+                        <p class="text-slate-600">
+                            M Hughes, A Eubanks, <u>Jared Slone</u>.
+                        </p>
+                        <p class="text-slate-500 text-sm italic mb-2">
+                             American Mathematical Society Fall Western Sectional Meeting.
+                        </p>
                     </div>
                 </div>
 
@@ -218,7 +212,6 @@
         </div>
     </section>
 
-    <!-- Footer / Contact -->
     <footer id="contact" class="bg-slate-900 text-slate-300 py-12">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-2xl font-bold text-white mb-6">Get In Touch</h2>
@@ -226,11 +219,10 @@
                 I'm always open to discussing new projects, research collaborations, or just chatting about technology.
             </p>
             <div class="flex justify-center gap-6 mb-8">
-                <a href="mailto:your.email@example.com" class="hover:text-white transition text-2xl"><i class="fas fa-envelope"></i></a>
-                <a href="#" class="hover:text-white transition text-2xl"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="hover:text-white transition text-2xl"><i class="fab fa-github"></i></a>
-                <a href="#" class="hover:text-white transition text-2xl"><i class="fab fa-twitter"></i></a>
-            </div>
+                <a href="mailto:js201@rice.edu" class="hover:text-white transition text-2xl"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/jared-slone" class="hover:text-white transition text-2xl"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/jared-slone" class="hover:text-white transition text-2xl"><i class="fab fa-github"></i></a>
+                </div>
             <p class="text-sm text-slate-500">
                 &copy; <script>document.write(new Date().getFullYear())</script> Jared K. Slone. All rights reserved.
             </p>
