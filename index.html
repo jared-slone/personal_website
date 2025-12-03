@@ -12,7 +12,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2563eb', // Customize your primary color here
+                        primary: '#2563eb',
                         secondary: '#475569',
                     }
                 }
@@ -77,53 +77,74 @@
                 <i class="fas fa-code-branch text-primary"></i> Selected Projects
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
                 
-                <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition border border-slate-100 flex flex-col">
-                    <div class="h-48 bg-slate-200 overflow-hidden relative group">
+                <article class="group bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full">
+                    <div class="h-48 bg-slate-200 overflow-hidden relative">
                         <img src="https://placehold.co/800x400/f1f5f9/475569?text=STAG-LLM" 
                              alt="STAG-LLM Project" 
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
-                    <div class="p-6 flex flex-col h-full justify-between">
-                        <h3 class="text-lg font-bold text-slate-900 mb-4">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">
                             STAG-LLM: Predicting TCR-pHLA binding with protein language models
                         </h3>
-                        <div class="flex flex-wrap gap-2 mt-auto">
+                        
+                        <div class="max-h-0 opacity-0 group-hover:max-h-[800px] group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden">
+                             <p class="text-slate-600 text-sm mb-4 leading-relaxed border-t border-slate-100 pt-3">
+                                Background: Strong binding between T cell receptors (TCRs) and peptide–HLA (pHLA) complexes is important for triggering the adaptive immune response. We present STAG-LLM, a multimodal ML model for predicting TCR-pHLA binding specificity that leverages sequence data and computationally generated 3D protein structures. We show that by combining a protein language model with a geometric deep learning architecture, our method outperforms existing methods even when trained on 3x smaller datasets.
+                            </p>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mt-auto pt-2">
                             <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded border border-blue-100">Deep Learning</span>
                             <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded border border-indigo-100">Structural Biology</span>
                         </div>
                     </div>
                 </article>
                 
-                <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition border border-slate-100 flex flex-col">
-                    <div class="h-48 bg-slate-200 overflow-hidden relative group">
+                <article class="group bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full">
+                    <div class="h-48 bg-slate-200 overflow-hidden relative">
                         <img src="https://placehold.co/800x400/f1f5f9/475569?text=STEGG" 
                              alt="STEGG Project" 
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
-                    <div class="p-6 flex flex-col h-full justify-between">
-                        <h3 class="text-lg font-bold text-slate-900 mb-4">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">
                             STEGG: Structural TCR-pMHC Ensemble Generator and Gallery
                         </h3>
-                        <div class="flex flex-wrap gap-2 mt-auto">
+                        
+                        <div class="max-h-0 opacity-0 group-hover:max-h-[800px] group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden">
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed border-t border-slate-100 pt-3">
+                                Understanding how T cell receptors (TCRs) recognize peptides presented by class-I major histocompatibility complexes (pMHCs) is a central challenge in immunology. We introduce STEGG, a computational framework for generating structural ensembles of TCR-pMHC complexes from amino acid sequences. STEGG generates a range of distinct low-energy 3D conformations for each TCR-pMHC pair, capturing the diversity and flexibility of TCRs, pMHCs, and their joint interactions.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-auto pt-2">
                             <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-semibold rounded border border-purple-100">Immunology</span>
                             <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded border border-indigo-100">Structural Biology</span>
                         </div>
                     </div>
                 </article>
 
-                <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition border border-slate-100 flex flex-col">
-                    <div class="h-48 bg-slate-200 overflow-hidden relative group">
+                <article class="group bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full">
+                    <div class="h-48 bg-slate-200 overflow-hidden relative">
                         <img src="https://placehold.co/800x400/f1f5f9/475569?text=Covid-19+AI" 
                              alt="Covid-19 AI Project" 
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
-                    <div class="p-6 flex flex-col h-full justify-between">
-                        <h3 class="text-lg font-bold text-slate-900 mb-4">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">
                             Covid-19 Diagnostic AI
                         </h3>
-                        <div class="flex flex-wrap gap-2 mt-auto">
+
+                        <div class="max-h-0 opacity-0 group-hover:max-h-[800px] group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden">
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed border-t border-slate-100 pt-3">
+                                Developed a deep learning framework to assist in the rapid diagnosis of COVID-19 using chest X-ray imagery. The model utilizes a convolutional neural network (CNN) architecture optimized for high sensitivity to detect pulmonary opacities characteristic of viral pneumonia. This tool aims to provide a second opinion for radiologists and accelerate triage in resource-constrained environments.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-auto pt-2">
                             <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded border border-blue-100">Deep Learning</span>
                             <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-semibold rounded border border-green-100">Diagnostics</span>
                         </div>
