@@ -1,929 +1,428 @@
+That is a fair correction. I have restored your **exact** original text for the projects and publications, but I have applied the upgraded "Academic/Professional" design system (Typography, Colors, Spacing) to wrap around that content.
+
+Here are the specific design changes applied to your original content:
+
+1.  **Typography:** Switched to **Playfair Display** (Serif) for headings and **Inter** (Sans-serif) for body text.
+2.  **Layout:** Switched the **Projects** section from a cramped 3-column grid to a **vertical stack**. Since your project descriptions are detailed abstracts, giving them full width makes them much easier to read and looks more like a research portfolio.
+3.  **Readability:** I removed the "Hover to reveal text" effect. In a professional context, you want your research abstracts visible immediately, not hidden behind an interaction.
+4.  **Visuals:** Updated the color palette to a muted **Teal/Slate** (more standard for bio-sciences) and added a subtle background texture.
+
+<!-- end list -->
+
+```html
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Jared K. Slone</title>
-
+    <title>Jared K. Slone | Researcher</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     
-
     <script>
-
         tailwind.config = {
-
             theme: {
-
                 extend: {
-
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
                     colors: {
-
-                        primary: '#2563eb',
-
-                        secondary: '#475569',
-
+                        primary: '#0f766e', // Teal-700
+                        secondary: '#334155', // Slate-700
+                        accent: '#f0fdfa', // Teal-50
                     }
-
                 }
-
             }
-
         }
-
     </script>
-
+    <style>
+        .bg-grid-pattern {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
 </head>
+<body class="bg-slate-50 text-slate-700 font-sans antialiased selection:bg-teal-100 selection:text-teal-900">
 
-<body class="bg-gray-50 text-slate-800 font-sans leading-relaxed">
-
-
-
-    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div class="flex justify-between h-16 items-center">
-
-                <div class="font-bold text-xl text-slate-900 tracking-tight">Jared K. Slone</div>
-
-                <div class="hidden md:flex space-x-8">
-
-                    <a href="#about" class="text-slate-600 hover:text-slate-900 transition">About</a>
-
-                    <a href="#projects" class="text-slate-600 hover:text-slate-900 transition">Projects</a>
-
-                    <a href="#publications" class="text-slate-600 hover:text-slate-900 transition">Publications</a>
-
-                    <a href="#education" class="text-slate-600 hover:text-slate-900 transition">Education</a>
-
-                    <a href="#awards" class="text-slate-600 hover:text-slate-900 transition">Awards</a>
-
+            <div class="flex justify-between h-20 items-center">
+                <div class="font-serif text-2xl font-bold text-slate-900 tracking-tight">Jared K. Slone</div>
+                <div class="hidden md:flex space-x-10 text-sm font-medium">
+                    <a href="#about" class="text-slate-500 hover:text-primary transition">About</a>
+                    <a href="#projects" class="text-slate-500 hover:text-primary transition">Projects</a>
+                    <a href="#publications" class="text-slate-500 hover:text-primary transition">Publications</a>
+                    <a href="#education" class="text-slate-500 hover:text-primary transition">Education</a>
+                    <a href="#awards" class="text-slate-500 hover:text-primary transition">Awards</a>
                 </div>
-
-                <div class="md:hidden w-6"></div>
-
+                <div class="md:hidden text-slate-500"><i class="fas fa-bars"></i></div>
             </div>
-
         </div>
-
     </nav>
 
-
-
-    <header id="about" class="bg-white pt-20 pb-16">
-
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-10">
-
-            <div class="w-40 h-40 md:w-56 md:h-56 relative shrink-0">
-
-                <div class="absolute inset-0 bg-gradient-to-tr from-blue-100 to-indigo-100 rounded-full animate-pulse"></div>
-
-                <img src="headshot2024.jpg" 
-
-                     alt="Profile Photo" 
-
-                     class="relative w-full h-full rounded-full object-cover border-4 border-white shadow-lg">
-
-            </div>
-
-
-
-            <div class="text-center md:text-left w-full">
-
-                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
-
-                    <span class="text-primary">Jared K. Slone</span>
-
-                </h1>
-
-                <p class="text-xl text-slate-600 mb-6 max-w-2xl">
-
-                    Researcher / Scientist based in Houston. I specialize in structural bioinformatics and I am passionate about using mathematics and machine learning to solve difficult problems in biology.
-
-                </p>
-
-                
-
-                <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
-
-                    <a href="mailto:js201@rice.edu" class="px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-700 transition flex items-center gap-2">
-
-                        <i class="fas fa-envelope"></i> Email Me
-
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/jared-slone" target="_blank" class="px-5 py-2.5 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition flex items-center gap-2 border border-blue-100">
-
-                        <i class="fab fa-linkedin"></i> LinkedIn
-
-                    </a>
-
-                    <a href="https://scholar.google.com/citations?user=m6p1HTAAAAAJ&hl=en" target="_blank" class="px-5 py-2.5 bg-white text-slate-700 rounded-lg hover:bg-gray-50 transition flex items-center gap-2 border border-slate-200">
-
-                        <i class="fas fa-graduation-cap"></i> Google Scholar
-
-                    </a>
-
+    <header id="about" class="relative pt-20 pb-20 overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="relative shrink-0">
+                    <div class="absolute -inset-2 bg-gradient-to-tr from-teal-100 to-blue-100 rounded-full blur-sm opacity-70"></div>
+                    <img src="headshot2024.jpg" 
+                         alt="Profile Photo" 
+                         class="relative w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-xl">
                 </div>
 
-
-
-                <div class="pt-6 border-t border-slate-100">
-
-                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Current Affiliations</p>
-
-                    <div class="flex flex-wrap justify-center md:justify-start gap-6 items-center">
-
-                        <img src="rice_logo.jpg" alt="Rice University" class="h-10 w-auto">
-
-                        <img src="mdaa_logo.png" alt="MD Anderson Cancer Center" class="h-12 w-auto">
-
-                        <img src="gcc_logo.png" alt="Gulf Coast Consortia" class="h-9 w-auto">
-
+                <div class="text-center md:text-left w-full">
+                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+                        Jared K. Slone
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-8 max-w-2xl font-light leading-relaxed">
+                        Researcher / Scientist based in Houston. I specialize in structural bioinformatics and I am passionate about using mathematics and machine learning to solve difficult problems in biology.
+                    </p>
+                    
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-10">
+                        <a href="mailto:js201@rice.edu" class="px-6 py-2.5 bg-slate-900 text-white rounded-full hover:bg-slate-700 transition flex items-center gap-2 text-sm font-medium shadow-lg shadow-slate-900/20">
+                            <i class="fas fa-envelope"></i> Email Me
+                        </a>
+                        <a href="https://www.linkedin.com/in/jared-slone" target="_blank" class="px-6 py-2.5 bg-white text-blue-700 border border-blue-100 rounded-full hover:bg-blue-50 transition flex items-center gap-2 text-sm font-medium">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=m6p1HTAAAAAJ&hl=en" target="_blank" class="px-6 py-2.5 bg-white text-slate-700 border border-slate-200 rounded-full hover:bg-slate-50 transition flex items-center gap-2 text-sm font-medium">
+                            <i class="fas fa-graduation-cap"></i> Google Scholar
+                        </a>
                     </div>
 
+                    <div class="pt-8 border-t border-slate-200">
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Current Affiliations</p>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-8 items-center opacity-80 grayscale hover:grayscale-0 transition duration-500">
+                            <img src="rice_logo.jpg" alt="Rice University" class="h-8 w-auto">
+                            <img src="mdaa_logo.png" alt="MD Anderson Cancer Center" class="h-10 w-auto">
+                            <img src="gcc_logo.png" alt="Gulf Coast Consortia" class="h-8 w-auto">
+                        </div>
+                    </div>
                 </div>
-
             </div>
-
         </div>
-
     </header>
 
-
-
-    <section id="projects" class="py-16 bg-gray-50">
-
+    <section id="projects" class="py-20 bg-white border-t border-slate-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
-
-                <i class="fas fa-atom text-primary"></i> Selected Projects
-
+            <h2 class="text-3xl font-serif font-bold text-slate-900 mb-12 flex items-center gap-3">
+                <span class="text-primary">Selected Projects</span>
             </h2>
 
-
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-
+            <div class="space-y-16">
                 
-
-                <article class="group bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-2xl transition-all duration-500 border border-slate-100 flex flex-col h-full transform origin-top hover:scale-105 hover:z-20 relative">
-
-                    <div class="h-48 bg-white overflow-hidden relative border-b border-slate-50">
-
-                        <img src="STAG_LLM_arch.png" 
-
-                             alt="STAG-LLM Project" 
-
-                             class="w-full h-full object-contain p-4 transition-transform duration-500">
-
+                <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+                    <div class="lg:w-1/3 w-full shrink-0">
+                        <div class="rounded-xl overflow-hidden shadow-lg border border-slate-100 bg-slate-50">
+                            <img src="STAG_LLM_arch.png" alt="STAG-LLM Project" class="w-full h-auto object-cover">
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded border border-blue-100">Deep Learning</span>
+                            <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded border border-indigo-100">Structural Biology</span>
+                        </div>
                     </div>
-
-                    <div class="p-6 flex flex-col h-full">
-
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">
-
+                    <div class="lg:w-2/3">
+                        <h3 class="text-2xl font-serif font-bold text-slate-900 mb-4">
                             STAG-LLM: Predicting TCR-pHLA binding with protein language models
-
                         </h3>
-
-                        
-
-                        <div class="max-h-0 opacity-0 group-hover:max-h-[800px] group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden">
-
-                             <p class="text-slate-600 text-sm mb-4 leading-relaxed border-t border-slate-100 pt-3">
-
-Strong binding between T cell receptors (TCRs) and peptide–HLA (pHLA) complexes plays a key role in the adaptive immune response. Accurately predicting which TCRs will bind to which pHLAs is central to advancing personalized immunotherapies such as TCR-T. Most existing ML approaches to TCR–pHLA binding prediction rely only on amino acid sequences, limiting their ability to capture the full complexity of binding interactions. Recent advances in protein structure modeling provide a unique opportunity to integrate 3D structural information into ML pipelines. We developed STAG-LLM, a multimodal model that combines protein language models with geometric deep learning to leverage both sequence data and computationally generated 3D structures of TCR–pHLA complexes in making predictions. Our results show that STAG-LLM outperforms existing methods, even when trained on datasets three times smaller. To further validate our model, we conduct in vitro alanine scanning experiments for four peptides and demonstrate a correlation with the attention weights learned by our model and in vitro results. Our findings demonstrate that structure-based approaches can meaningfully improve prediction of TCR–pHLA specificity.
-
-                             </p>
-
-                        </div>
-
-                        
-
-                        <div class="flex flex-wrap gap-2 mt-auto pt-2">
-
-                            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded border border-blue-100">Deep Learning</span>
-
-                            <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded border border-indigo-100">Structural Biology</span>
-
-                        </div>
-
+                        <p class="text-slate-600 leading-relaxed text-sm lg:text-base">
+                            Strong binding between T cell receptors (TCRs) and peptide–HLA (pHLA) complexes plays a key role in the adaptive immune response. Accurately predicting which TCRs will bind to which pHLAs is central to advancing personalized immunotherapies such as TCR-T. Most existing ML approaches to TCR–pHLA binding prediction rely only on amino acid sequences, limiting their ability to capture the full complexity of binding interactions. Recent advances in protein structure modeling provide a unique opportunity to integrate 3D structural information into ML pipelines. We developed STAG-LLM, a multimodal model that combines protein language models with geometric deep learning to leverage both sequence data and computationally generated 3D structures of TCR–pHLA complexes in making predictions. Our results show that STAG-LLM outperforms existing methods, even when trained on datasets three times smaller. To further validate our model, we conduct in vitro alanine scanning experiments for four peptides and demonstrate a correlation with the attention weights learned by our model and in vitro results. Our findings demonstrate that structure-based approaches can meaningfully improve prediction of TCR–pHLA specificity.
+                        </p>
                     </div>
+                </div>
 
-                </article>
+                <div class="w-full h-px bg-slate-100"></div>
 
-                
-
-                <article class="group bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-2xl transition-all duration-500 border border-slate-100 flex flex-col h-full transform origin-top hover:scale-105 hover:z-20 relative">
-
-                    <div class="h-48 bg-white overflow-hidden relative border-b border-slate-50">
-
-                        <img src="stegg_web.png" 
-
-                             alt="STEGG Project" 
-
-                             class="w-full h-full object-contain p-4 transition-transform duration-500">
-
-                    </div>
-
-                    <div class="p-6 flex flex-col h-full">
-
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">
-
-                            STEGG: Structural TCR-pMHC Ensemble Generator and Gallery
-
-                        </h3>
-
-                        
-
-                        <div class="max-h-0 opacity-0 group-hover:max-h-[800px] group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden">
-
-                            <p class="text-slate-600 text-sm mb-4 leading-relaxed border-t border-slate-100 pt-3">
-
-Understanding how T cell receptors (TCRs) recognize peptides presented by class-I major histocompatibility complexes (pMHCs) is a central challenge in immunology, with implications for infectious disease, autoimmunity, and personalized cancer immunotherapies. While recent 3D prediction advances have improved modeling, current methods fail to capture the flexible nature of TCR-pMHC interactions. Due to flexibility in TCR CDR loops and peptides, these dynamic interactions adopt a range of binding modes not represented by single static structures. We introduce STEGG: Structural TCR-pMHC Ensemble Generator and Gallery, a computational framework for generating structural ensembles from sequences. STEGG generates distinct low-energy 3D conformations, capturing the flexibility of TCRs, pMHCs, and their interactions. STEGG utilizes a domain-specific sampling algorithm for efficient modeling. We show that STEGG recovers conformations with low RMSD to experimentally solved structures and finds diverse, biologically relevant binding modes. We provide a publicly available database of structural ensembles. By going beyond static generation, STEGG presents a new way for studying TCR-pMHC interactions.
-
-                            </p>
-
+                <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+                    <div class="lg:w-1/3 w-full shrink-0">
+                        <div class="rounded-xl overflow-hidden shadow-lg border border-slate-100 bg-slate-50">
+                            <img src="stegg_web.png" alt="STEGG Project" class="w-full h-auto object-cover">
                         </div>
-
-
-
-                        <div class="flex flex-wrap gap-2 mt-auto pt-2">
-
+                        <div class="flex flex-wrap gap-2 mt-4">
                             <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-semibold rounded border border-purple-100">Immunology</span>
-
                             <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded border border-indigo-100">Structural Biology</span>
-
                         </div>
-
                     </div>
-
-                </article>
-
-
-
-                <article class="group bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-2xl transition-all duration-500 border border-slate-100 flex flex-col h-full transform origin-top hover:scale-105 hover:z-20 relative">
-
-                    <div class="h-48 bg-white overflow-hidden relative border-b border-slate-50">
-
-                        <img src="covid-CT.jpg" 
-
-                             alt="Covid-19 AI Project" 
-
-                             class="w-full h-full object-contain p-4 transition-transform duration-500">
-
-                    </div>
-
-                    <div class="p-6 flex flex-col h-full">
-
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">
-
-                            Covid-19 Diagnostic AI
-
+                    <div class="lg:w-2/3">
+                        <h3 class="text-2xl font-serif font-bold text-slate-900 mb-4">
+                            STEGG: Structural TCR-pMHC Ensemble Generator and Gallery
                         </h3>
+                        <p class="text-slate-600 leading-relaxed text-sm lg:text-base">
+                            Understanding how T cell receptors (TCRs) recognize peptides presented by class-I major histocompatibility complexes (pMHCs) is a central challenge in immunology, with implications for infectious disease, autoimmunity, and personalized cancer immunotherapies. While recent 3D prediction advances have improved modeling, current methods fail to capture the flexible nature of TCR-pMHC interactions. Due to flexibility in TCR CDR loops and peptides, these dynamic interactions adopt a range of binding modes not represented by single static structures. We introduce STEGG: Structural TCR-pMHC Ensemble Generator and Gallery, a computational framework for generating structural ensembles from sequences. STEGG generates distinct low-energy 3D conformations, capturing the flexibility of TCRs, pMHCs, and their interactions. STEGG utilizes a domain-specific sampling algorithm for efficient modeling. We show that STEGG recovers conformations with low RMSD to experimentally solved structures and finds diverse, biologically relevant binding modes. We provide a publicly available database of structural ensembles. By going beyond static generation, STEGG presents a new way for studying TCR-pMHC interactions.
+                        </p>
+                    </div>
+                </div>
 
+                <div class="w-full h-px bg-slate-100"></div>
 
-
-                        <div class="max-h-0 opacity-0 group-hover:max-h-[800px] group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden">
-
-                            <p class="text-slate-600 text-sm mb-4 leading-relaxed border-t border-slate-100 pt-3">
-
-To address the high false-negative rates of PCR testing and the interpretation bottlenecks of manual radiology, we developed a computer vision solution for detecting COVID-19 in chest CT scans. Utilizing transfer learning, we fine-tuned an adapted ResNet-50 architecture on a dataset of 110 covid-positive CT scans and hundreds of pre-covid scans, including scans exhibiting other lung pathologies like COPD. The resulting model demonstrated robust performance across diverse clinical settings, achieving a sensitivity of 0.99 and a specificity of 0.92 on an external testing dataset of 438 scans. The system was deployed via a secure cloud infrastructure to ensure rapid, scalable access for providers. This project achieved widespread clinical adoption, being utilized in over 15 states and several countries to triage patients. By automating detection and quantifying lung involvement, this tool successfully augmented radiologist capabilities, offering a high-accuracy diagnostic aid during the global pandemic.
-
-                            </p>
-
+                <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+                    <div class="lg:w-1/3 w-full shrink-0">
+                        <div class="rounded-xl overflow-hidden shadow-lg border border-slate-100 bg-slate-50">
+                            <img src="covid-CT.jpg" alt="Covid-19 AI Project" class="w-full h-auto object-cover">
                         </div>
-
-
-
-                        <div class="flex flex-wrap gap-2 mt-auto pt-2">
-
+                        <div class="flex flex-wrap gap-2 mt-4">
                             <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded border border-blue-100">Deep Learning</span>
-
                             <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-semibold rounded border border-green-100">Diagnostics</span>
-
                         </div>
-
                     </div>
-
-                </article>
-
-
+                    <div class="lg:w-2/3">
+                        <h3 class="text-2xl font-serif font-bold text-slate-900 mb-4">
+                            Covid-19 Diagnostic AI
+                        </h3>
+                        <p class="text-slate-600 leading-relaxed text-sm lg:text-base">
+                            To address the high false-negative rates of PCR testing and the interpretation bottlenecks of manual radiology, we developed a computer vision solution for detecting COVID-19 in chest CT scans. Utilizing transfer learning, we fine-tuned an adapted ResNet-50 architecture on a dataset of 110 covid-positive CT scans and hundreds of pre-covid scans, including scans exhibiting other lung pathologies like COPD. The resulting model demonstrated robust performance across diverse clinical settings, achieving a sensitivity of 0.99 and a specificity of 0.92 on an external testing dataset of 438 scans. The system was deployed via a secure cloud infrastructure to ensure rapid, scalable access for providers. This project achieved widespread clinical adoption, being utilized in over 15 states and several countries to triage patients. By automating detection and quantifying lung involvement, this tool successfully augmented radiologist capabilities, offering a high-accuracy diagnostic aid during the global pandemic.
+                        </p>
+                    </div>
+                </div>
 
             </div>
-
         </div>
-
     </section>
 
-
-
-    <section id="publications" class="py-16 bg-white border-t border-slate-200">
-
+    <section id="publications" class="py-20 bg-slate-50 border-t border-slate-200">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
-
-                <i class="fas fa-book-open text-primary"></i> Publications
-
+            <h2 class="text-3xl font-serif font-bold text-slate-900 mb-12 flex items-center gap-3">
+                <span class="text-primary">Publications</span>
             </h2>
-
             
-
-            <div class="space-y-8">
-
+            <div class="space-y-12 border-l border-slate-200 ml-3 md:ml-6">
                 
-
-                <div class="group">
-
-                    <div class="flex flex-col sm:flex-row gap-4">
-
-                        <div class="sm:w-32 shrink-0 text-sm font-bold text-slate-400 pt-1">2025</div>
-
-                        <div class="space-y-6 w-full">
-
-
-
-                            <div class="border-t border-slate-100 pt-6">
-
-                                <h4 class="text-lg font-bold text-slate-900">
-
-                                    STEGG: Structural TCR-pMHC Ensemble Generator and Gallery
-
-                                </h4>
-
-                                <p class="text-slate-600 leading-relaxed">
-
-                                    <u>Jared K. Slone</u>, Alexander W. Bock, Maurício Menegatti Rigo, Chengxuan Zou, Alexander Reuben, Lydia E. Kavraki.
-
-                                </p>
-
-                                <p class="text-slate-500 text-sm italic mt-1">
-
-                                    Preprint / SSRN.
-
-                                </p>
-
-                            </div>
-
-                            
-
-                            <div>
-
-                                <h4 class="text-lg font-bold text-slate-900">
-
-                                    STAG-LLM: Predicting TCR-pHLA binding with protein language models and computationally generated 3D structures
-
-                                </h4>
-
-                                <p class="text-slate-600 leading-relaxed">
-
-                                    <u>Jared K. Slone</u>, Minying Zhang, Peixin Jiang, Amanda Montoya, Emily Bontekoe, Barbara Nassif Rausseo, Alexandre Reuben, Lydia E. Kavraki.
-
-                                </p>
-
-                                <p class="text-slate-500 text-sm italic mt-1">
-
-                                    Computational and Structural Biotechnology Journal, 27, 3885-3896.
-
-                                </p>
-
-                            </div>
-
-
-
-                            <div class="border-t border-slate-100 pt-6">
-
-                                <h4 class="text-lg font-bold text-slate-900">
-
-                                    TCR-pMHC Binding Specificity Prediction from Structure Using Graph Neural Networks
-
-                                </h4>
-
-                                <p class="text-slate-600 leading-relaxed">
-
-                                    <u>Jared K. Slone</u>, Anja Conev, Maurício Menegatti Rigo, Alexandre Reuben, Lydia E. Kavraki.
-
-                                </p>
-
-                                <p class="text-slate-500 text-sm italic mt-1">
-
-                                    IEEE Transactions on Computational Biology and Bioinformatics.
-
-                                </p>
-
-                            </div>
-
-
-
-                            <div class="border-t border-slate-100 pt-6">
-
-                                <h4 class="text-lg font-bold text-slate-900">
-
-                                    Time-lapse analysis of TCR-T cells highlights heterogeneity and kinetics of responses upon antigen stimulation
-
-                                </h4>
-
-                                <p class="text-slate-600 leading-relaxed">
-
-                                    Amanda S Montoya, Peixin Jiang, Yulia Shulga, Sarah Forward, Emane Rose Assita, Emily G Bontekoe, Minying Zhang, <u>Jared K. Slone</u>, Ludovica La Posta, Eleonora Dondossola, Lydia Kavraki, Jianjun J Zhang, Trevor Brown, John V Heymach, Sheldon Kwok, Alexandre Reuben
-
-                                </p>
-
-                                <p class="text-slate-500 text-sm italic mt-1">
-
-                                    Journal for ImmunoTherapy of Cancer, 13 (Suppl 2).
-
-                                </p>
-
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="group border-t border-slate-100 pt-8">
-
-                    <div class="flex flex-col sm:flex-row gap-4">
-
-                        <div class="sm:w-32 shrink-0 text-sm font-bold text-slate-400 pt-1">2024</div>
-
-                        <div class="space-y-6 w-full">
-
-                            
-
-                            <div>
-
-                                <h4 class="text-lg font-bold text-slate-900">
-
-                                    Unbiased microfluidic isolation of antigen-specific T cells in solid tumors
-
-                                </h4>
-
-                                <p class="text-slate-600 leading-relaxed">
-
-                                    AAmanda S Montoya, Meredith Frank, Peixin Jiang, Minying Zhang, Hui Nie, Emily Bontekoe, <u>Jared K. Slone</u>, Ludovica La Posta, Kavya L Singampalli, Desh Deepak Dixit, Weihong Xiao, Tina Cascone, Jianjun Zhang, Eleonora Dondossola, Lydia Kavraki, Maura Gillison, Pamela L Wenzel, Peter B Lillehoj, John V Heymach, Alexandre Reuben
-
-                                </p>
-
-                                <p class="text-slate-500 text-sm italic mt-1">
-
-                                    Journal for ImmunoTherapy of Cancer, 12 (Suppl 2), 216.
-
-                                </p>
-
-                            </div>
-
-
-
-                            <div class="border-t border-slate-100 pt-6">
-
-                                <h4 class="text-lg font-bold text-slate-900">
-
-                                    T cell receptor engineering targeting EGFR-mutant non-small cell lung cancer
-
-                                </h4>
-
-                                <p class="text-slate-600 leading-relaxed">
-
-                                    Emily Bontekoe, Minying Zhang, Peixin Jiang, Amanda Montoya, <u>Jared K. Slone</u>, Ludovica La Posta, Jianjun Zhang, Cassian Yee, Eleonora Dondossola, Lydia Kavraki, Gregory Lizee, John V Heymach, Alexandre Reuben
-
-                                </p>
-
-                                <p class="text-slate-500 text-sm italic mt-1">
-
-                                    Journal for ImmunoTherapy of Cancer, 12 (Suppl 2), 358.
-
-                                </p>
-
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="group border-t border-slate-100 pt-8">
-
-                    <div class="flex flex-col sm:flex-row gap-4">
-
-                        <div class="sm:w-32 shrink-0 text-sm font-bold text-slate-400 pt-1">2023</div>
-
-                        <div class="w-full">
-
-                            <h4 class="text-lg font-bold text-slate-900">
-
-                                PepSim: T-cell cross-reactivity prediction via comparison of peptide sequence and peptide-HLA structure
-
-                            </h4>
-
-                            <p class="text-slate-600 leading-relaxed">
-
-                                Sarah Hall-Swan, <u>Jared Slone</u>, Maurício Menegatti Rigo, Dinler A. Antunes, Gregory Lizée, Lydia E. Kavraki.
-
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-slate-50"></span>
+                    <div class="font-bold text-slate-400 mb-6 text-lg">2025</div>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug">STEGG: Structural TCR-pMHC Ensemble Generator and Gallery</h4>
+                            <p class="text-slate-600 mt-2">
+                                <u>Jared K. Slone</u>, Alexander W. Bock, Maurício Menegatti Rigo, Chengxuan Zou, Alexander Reuben, Lydia E. Kavraki.
                             </p>
-
-                            <p class="text-slate-500 text-sm italic mt-1">
-
-                                Frontiers in Immunology, 14, 1108303.
-
+                            <p class="text-slate-500 text-sm italic mt-1 font-serif">Preprint / SSRN.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug">STAG-LLM: Predicting TCR-pHLA binding with protein language models and computationally generated 3D structures</h4>
+                            <p class="text-slate-600 mt-2">
+                                <u>Jared K. Slone</u>, Minying Zhang, Peixin Jiang, Amanda Montoya, Emily Bontekoe, Barbara Nassif Rausseo, Alexandre Reuben, Lydia E. Kavraki.
                             </p>
-
+                            <p class="text-slate-500 text-sm italic mt-1 font-serif">Computational and Structural Biotechnology Journal, 27, 3885-3896.</p>
                         </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="group border-t border-slate-100 pt-8">
-
-                    <div class="flex flex-col sm:flex-row gap-4">
-
-                        <div class="sm:w-32 shrink-0 text-sm font-bold text-slate-400 pt-1">2021</div>
-
-                        <div class="space-y-6 w-full">
-
-                            
-
-                            <div>
-
-                                <h4 class="text-lg font-bold text-slate-900">
-
-                                    Using generative adversarial networks to produce knots with specified invariants
-
-                                </h4>
-
-                                <p class="text-slate-600 leading-relaxed">
-
-                                    Mark Hughes, Amy Eubanks, <u>Jared Slone</u>.
-
-                                </p>
-
-                                <p class="text-slate-500 text-sm italic mt-1">
-
-                                    2021 Fall Western Sectional Meeting (American Mathematical Society).
-
-                                </p>
-
-                            </div>
-
-                            
-
-                            <div class="border-t border-slate-100 pt-6">
-
-                                <h4 class="text-lg font-bold text-slate-900">
-
-                                    Using deep learning to generate knots with prescribed invariants
-
-                                </h4>
-
-                                <p class="text-slate-600 leading-relaxed">
-
-                                    Mark Hughes, Amy Eubanks, <u>Jared Slone</u>.
-
-                                </p>
-
-                                <p class="text-slate-500 text-sm italic mt-1">
-
-                                    2021 Fall Central Sectional Meeting (American Mathematical Society).
-
-                                </p>
-
-                            </div>
-
-
-
-                             <div class="border-t border-slate-100 pt-6">
-
-                                <h4 class="text-lg font-bold text-slate-900">
-
-                                    Physics-informed deep learning with uncertainty quantification for weapons radiography
-
-                                </h4>
-
-                                <p class="text-slate-600 leading-relaxed">
-
-                                    Margaret C Lund, Marylesa M Howard, Chelsey E Noorda, <u>Jared K. Slone</u>.
-
-                                </p>
-
-                                <p class="text-slate-500 text-sm italic mt-1">
-
-                                    Technical Report, Nevada National Security Site (NNSS), North Las Vegas, NV.
-
-                                </p>
-
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-            </div>
-
-            
-
-        </div>
-
-    </section>
-
-
-
-    <section id="education" class="py-16 bg-gray-50 border-t border-slate-200">
-
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
-
-                <i class="fas fa-graduation-cap text-primary"></i> Education
-
-            </h2>
-
-
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                
-
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col h-full">
-
-                    <div class="flex items-start justify-between mb-4">
 
                         <div>
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug">TCR-pMHC Binding Specificity Prediction from Structure Using Graph Neural Networks</h4>
+                            <p class="text-slate-600 mt-2">
+                                <u>Jared K. Slone</u>, Anja Conev, Maurício Menegatti Rigo, Alexandre Reuben, Lydia E. Kavraki.
+                            </p>
+                            <p class="text-slate-500 text-sm italic mt-1 font-serif">IEEE Transactions on Computational Biology and Bioinformatics.</p>
+                        </div>
 
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug">Time-lapse analysis of TCR-T cells highlights heterogeneity and kinetics of responses upon antigen stimulation</h4>
+                            <p class="text-slate-600 mt-2">
+                                Amanda S Montoya, Peixin Jiang, Yulia Shulga, Sarah Forward, Emane Rose Assita, Emily G Bontekoe, Minying Zhang, <u>Jared K. Slone</u>, Ludovica La Posta, Eleonora Dondossola, Lydia Kavraki, Jianjun J Zhang, Trevor Brown, John V Heymach, Sheldon Kwok, Alexandre Reuben
+                            </p>
+                            <p class="text-slate-500 text-sm italic mt-1 font-serif">Journal for ImmunoTherapy of Cancer, 13 (Suppl 2).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-slate-300 ring-4 ring-slate-50"></span>
+                    <div class="font-bold text-slate-400 mb-6 text-lg">2024</div>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug">Unbiased microfluidic isolation of antigen-specific T cells in solid tumors</h4>
+                            <p class="text-slate-600 mt-2">
+                                Amanda S Montoya, Meredith Frank, Peixin Jiang, Minying Zhang, Hui Nie, Emily Bontekoe, <u>Jared K. Slone</u>, Ludovica La Posta, Kavya L Singampalli, Desh Deepak Dixit, Weihong Xiao, Tina Cascone, Jianjun Zhang, Eleonora Dondossola, Lydia Kavraki, Maura Gillison, Pamela L Wenzel, Peter B Lillehoj, John V Heymach, Alexandre Reuben
+                            </p>
+                            <p class="text-slate-500 text-sm italic mt-1 font-serif">Journal for ImmunoTherapy of Cancer, 12 (Suppl 2), 216.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug">T cell receptor engineering targeting EGFR-mutant non-small cell lung cancer</h4>
+                            <p class="text-slate-600 mt-2">
+                                Emily Bontekoe, Minying Zhang, Peixin Jiang, Amanda Montoya, <u>Jared K. Slone</u>, Ludovica La Posta, Jianjun Zhang, Cassian Yee, Eleonora Dondossola, Lydia Kavraki, Gregory Lizee, John V Heymach, Alexandre Reuben
+                            </p>
+                            <p class="text-slate-500 text-sm italic mt-1 font-serif">Journal for ImmunoTherapy of Cancer, 12 (Suppl 2), 358.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-slate-300 ring-4 ring-slate-50"></span>
+                    <div class="font-bold text-slate-400 mb-6 text-lg">2023</div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 leading-snug">PepSim: T-cell cross-reactivity prediction via comparison of peptide sequence and peptide-HLA structure</h4>
+                        <p class="text-slate-600 mt-2">
+                            Sarah Hall-Swan, <u>Jared Slone</u>, Maurício Menegatti Rigo, Dinler A. Antunes, Gregory Lizée, Lydia E. Kavraki.
+                        </p>
+                        <p class="text-slate-500 text-sm italic mt-1 font-serif">Frontiers in Immunology, 14, 1108303.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-slate-300 ring-4 ring-slate-50"></span>
+                    <div class="font-bold text-slate-400 mb-6 text-lg">2021</div>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug">Using generative adversarial networks to produce knots with specified invariants</h4>
+                            <p class="text-slate-600 mt-2">
+                                Mark Hughes, Amy Eubanks, <u>Jared Slone</u>.
+                            </p>
+                            <p class="text-slate-500 text-sm italic mt-1 font-serif">2021 Fall Western Sectional Meeting (American Mathematical Society).</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug">Using deep learning to generate knots with prescribed invariants</h4>
+                            <p class="text-slate-600 mt-2">
+                                Mark Hughes, Amy Eubanks, <u>Jared Slone</u>.
+                            </p>
+                            <p class="text-slate-500 text-sm italic mt-1 font-serif">2021 Fall Central Sectional Meeting (American Mathematical Society).</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug">Physics-informed deep learning with uncertainty quantification for weapons radiography</h4>
+                            <p class="text-slate-600 mt-2">
+                                Margaret C Lund, Marylesa M Howard, Chelsey E Noorda, <u>Jared K. Slone</u>.
+                            </p>
+                            <p class="text-slate-500 text-sm italic mt-1 font-serif">Technical Report, Nevada National Security Site (NNSS), North Las Vegas, NV.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-serif font-bold text-slate-900 mb-12 flex items-center gap-3">
+                <span class="text-primary">Education</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+                <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 flex flex-col h-full hover:border-teal-200 transition">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
                             <h3 class="text-xl font-bold text-slate-900">PhD Candidate</h3>
-
                             <div class="text-primary font-semibold">Computer Science</div>
-
                         </div>
-
-                        <img src="rice_logo.jpg" alt="Rice University" class="h-10 w-auto opacity-90">
-
+                        <img src="rice_logo.jpg" alt="Rice University" class="h-10 w-auto opacity-80 mix-blend-multiply">
                     </div>
-
-                    
-
                     <div class="mt-auto">
-
                         <div class="text-slate-700 font-medium">Rice University</div>
-
                         <div class="text-slate-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i> Houston, Texas</div>
-
                     </div>
-
                 </div>
 
-
-
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col h-full">
-
+                <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 flex flex-col h-full hover:border-teal-200 transition">
                     <div class="flex items-start justify-between mb-4">
-
                         <div>
-
                             <h3 class="text-xl font-bold text-slate-900">Bachelor of Science</h3>
-
                             <div class="text-primary font-semibold leading-tight">Applied & Computational Mathematics</div>
-
                         </div>
-
-                        <img src="byu_logo.png" alt="Rice University" class="h-10 w-auto opacity-90">
-
-                        </div>
-
+                        <img src="byu_logo.png" alt="BYU" class="h-10 w-auto opacity-80 mix-blend-multiply">
                     </div>
-
-                    
-
                     <div class="mt-4 mb-6">
-
                         <ul class="space-y-1">
-
                             <li class="flex items-center text-sm text-slate-600">
-
-                                <i class="fas fa-check text-green-500 mr-2 text-xs"></i> Minor: Computer Science
-
+                                <i class="fas fa-check text-teal-500 mr-2 text-xs"></i> Minor: Computer Science
                             </li>
-
                             <li class="flex items-center text-sm text-slate-600">
-
-                                <i class="fas fa-check text-green-500 mr-2 text-xs"></i> Minor: Physics
-
+                                <i class="fas fa-check text-teal-500 mr-2 text-xs"></i> Minor: Physics
                             </li>
-
                         </ul>
-
                     </div>
-
-
-
-                    <div class="mt-auto pt-4 border-t border-slate-50">
-
+                    <div class="mt-auto pt-4 border-t border-slate-200">
                         <div class="text-slate-700 font-medium">Brigham Young University</div>
-
                         <div class="text-slate-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i> Provo, Utah</div>
-
                     </div>
-
                 </div>
-
-
-
             </div>
 
-        </div>
-
-    </section>
-
-
-
-    <section id="awards" class="py-16 bg-white border-t border-slate-200">
-
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
-
-                <i class="fas fa-trophy text-primary"></i> Honors & Awards
-
-            </h2>
-
-
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
+            <div id="awards">
+                <h2 class="text-3xl font-serif font-bold text-slate-900 mb-10 flex items-center gap-3">
+                    <span class="text-primary">Honors & Awards</span>
+                </h2>
                 
-
-                <div class="bg-gray-50 p-5 rounded-lg shadow-sm border border-slate-100 flex items-start gap-4">
-
-                    <div class="shrink-0 pt-1">
-
-                        <i class="fas fa-award text-yellow-500 text-xl"></i>
-
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-5 rounded-lg border border-slate-100 flex items-start gap-4 hover:shadow-md transition">
+                        <div class="shrink-0 pt-1">
+                            <i class="fas fa-award text-yellow-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">NLM Training Program Fellowship</h4>
+                            <p class="text-sm text-slate-600 mt-1">Biomedical Informatics and Data Science</p>
+                        </div>
                     </div>
 
-                    <div>
-
-                        <h4 class="font-bold text-slate-900">NLM Training Program Fellowship</h4>
-
-                        <p class="text-sm text-slate-600 mt-1">Biomedical Informatics and Data Science</p>
-
+                    <div class="bg-white p-5 rounded-lg border border-slate-100 flex items-start gap-4 hover:shadow-md transition">
+                        <div class="shrink-0 pt-1">
+                            <i class="fas fa-medal text-yellow-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Best Research Presentation</h4>
+                            <p class="text-sm text-slate-600 mt-1">Graduate Research Seminar, Rice University</p>
+                        </div>
                     </div>
 
+                    <div class="bg-white p-5 rounded-lg border border-slate-100 flex items-start gap-4 hover:shadow-md transition">
+                        <div class="shrink-0 pt-1">
+                            <i class="fas fa-certificate text-slate-300 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Marcellus and Shirley Burton Scholarship</h4>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-lg border border-slate-100 flex items-start gap-4 hover:shadow-md transition">
+                        <div class="shrink-0 pt-1">
+                            <i class="fas fa-certificate text-slate-300 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Academic Scholarship</h4>
+                            <p class="text-sm text-slate-600 mt-1">Brigham Young University</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-lg border border-slate-100 flex items-start gap-4 hover:shadow-md transition">
+                        <div class="shrink-0 pt-1">
+                            <i class="fas fa-scroll text-slate-300 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Dean’s List</h4>
+                            <p class="text-sm text-slate-600 mt-1">Brigham Young University</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-lg border border-slate-100 flex items-start gap-4 hover:shadow-md transition">
+                        <div class="shrink-0 pt-1">
+                            <i class="fas fa-star text-slate-300 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Valedictorian</h4>
+                            <p class="text-sm text-slate-600 mt-1">Roy High School</p>
+                        </div>
+                    </div>
                 </div>
-
-
-
-                <div class="bg-gray-50 p-5 rounded-lg shadow-sm border border-slate-100 flex items-start gap-4">
-
-                    <div class="shrink-0 pt-1">
-
-                        <i class="fas fa-medal text-yellow-500 text-xl"></i>
-
-                    </div>
-
-                    <div>
-
-                        <h4 class="font-bold text-slate-900">Best Research Presentation</h4>
-
-                        <p class="text-sm text-slate-600 mt-1">Graduate Research Seminar, Rice University</p>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="bg-gray-50 p-5 rounded-lg shadow-sm border border-slate-100 flex items-start gap-4">
-
-                    <div class="shrink-0 pt-1">
-
-                        <i class="fas fa-certificate text-slate-400 text-xl"></i>
-
-                    </div>
-
-                    <div>
-
-                        <h4 class="font-bold text-slate-900">Marcellus and Shirley Burton Scholarship</h4>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="bg-gray-50 p-5 rounded-lg shadow-sm border border-slate-100 flex items-start gap-4">
-
-                    <div class="shrink-0 pt-1">
-
-                        <i class="fas fa-certificate text-slate-400 text-xl"></i>
-
-                    </div>
-
-                    <div>
-
-                        <h4 class="font-bold text-slate-900">Academic Scholarship</h4>
-
-                        <p class="text-sm text-slate-600 mt-1">Brigham Young University</p>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="bg-gray-50 p-5 rounded-lg shadow-sm border border-slate-100 flex items-start gap-4">
-
-                    <div class="shrink-0 pt-1">
-
-                        <i class="fas fa-scroll text-slate-400 text-xl"></i>
-
-                    </div>
-
-                    <div>
-
-                        <h4 class="font-bold text-slate-900">Dean’s List</h4>
-
-                        <p class="text-sm text-slate-600 mt-1">Brigham Young University</p>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="bg-gray-50 p-5 rounded-lg shadow-sm border border-slate-100 flex items-start gap-4">
-
-                    <div class="shrink-0 pt-1">
-
-                        <i class="fas fa-star text-slate-400 text-xl"></i>
-
-                    </div>
-
-                    <div>
-
-                        <h4 class="font-bold text-slate-900">Valedictorian</h4>
-
-                        <p class="text-sm text-slate-600 mt-1">Roy High School</p>
-
-                    </div>
-
-                </div>
-
-
-
             </div>
-
         </div>
-
     </section>
 
-
-
-    <footer class="bg-slate-900 text-slate-400 py-6">
-
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t-4 border-primary">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
-            <p class="text-sm">
-
+            <p class="text-sm font-light">
                 &copy; <script>document.write(new Date().getFullYear())</script> Jared K. Slone. All rights reserved.
-
             </p>
-
         </div>
-
     </footer>
 
-
-
 </body>
-
 </html>
+```
