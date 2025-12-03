@@ -1,21 +1,9 @@
-That is a fair correction. I have restored your **exact** original text for the projects and publications, but I have applied the upgraded "Academic/Professional" design system (Typography, Colors, Spacing) to wrap around that content.
-
-Here are the specific design changes applied to your original content:
-
-1.  **Typography:** Switched to **Playfair Display** (Serif) for headings and **Inter** (Sans-serif) for body text.
-2.  **Layout:** Switched the **Projects** section from a cramped 3-column grid to a **vertical stack**. Since your project descriptions are detailed abstracts, giving them full width makes them much easier to read and looks more like a research portfolio.
-3.  **Readability:** I removed the "Hover to reveal text" effect. In a professional context, you want your research abstracts visible immediately, not hidden behind an interaction.
-4.  **Visuals:** Updated the color palette to a muted **Teal/Slate** (more standard for bio-sciences) and added a subtle background texture.
-
-<!-- end list -->
-
-```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jared K. Slone | Researcher</title>
+    <title>Jared K. Slone</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
@@ -54,8 +42,6 @@ Here are the specific design changes applied to your original content:
                     <a href="#about" class="text-slate-500 hover:text-primary transition">About</a>
                     <a href="#projects" class="text-slate-500 hover:text-primary transition">Projects</a>
                     <a href="#publications" class="text-slate-500 hover:text-primary transition">Publications</a>
-                    <a href="#education" class="text-slate-500 hover:text-primary transition">Education</a>
-                    <a href="#awards" class="text-slate-500 hover:text-primary transition">Awards</a>
                 </div>
                 <div class="md:hidden text-slate-500"><i class="fas fa-bars"></i></div>
             </div>
@@ -95,10 +81,11 @@ Here are the specific design changes applied to your original content:
 
                     <div class="pt-8 border-t border-slate-200">
                         <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Current Affiliations</p>
-                        <div class="flex flex-wrap justify-center md:justify-start gap-8 items-center opacity-80 grayscale hover:grayscale-0 transition duration-500">
-                            <img src="rice_logo.jpg" alt="Rice University" class="h-8 w-auto">
-                            <img src="mdaa_logo.png" alt="MD Anderson Cancer Center" class="h-10 w-auto">
-                            <img src="gcc_logo.png" alt="Gulf Coast Consortia" class="h-8 w-auto">
+                        <div class="flex flex-wrap justify-center md:justify-start gap-6 items-center">
+                            <img src="rice_logo.jpg" alt="Rice University" class="h-10 w-auto">
+                            <img src="mdaa_logo.png" alt="MD Anderson Cancer Center" class="h-12 w-auto">
+                            <img src="gcc_logo.png" alt="Gulf Coast Consortia" class="h-9 w-auto">
+
                         </div>
                     </div>
                 </div>
@@ -301,116 +288,125 @@ Here are the specific design changes applied to your original content:
     </section>
 
     <section id="education" class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-serif font-bold text-slate-900 mb-12 flex items-center gap-3">
-                <span class="text-primary">Education</span>
-            </h2>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-                <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 flex flex-col h-full hover:border-teal-200 transition">
-                    <div class="flex items-start justify-between mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">PhD Candidate</h3>
-                            <div class="text-primary font-semibold">Computer Science</div>
+                <div class="lg:w-5/12 w-full shrink-0">
+                    <h2 class="text-3xl font-serif font-bold text-slate-900 mb-8 flex items-center gap-3">
+                        <span class="text-primary">Education</span>
+                    </h2>
+
+                    <div class="flex flex-col space-y-6">
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 flex flex-col hover:border-teal-200 transition shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-lg font-bold text-slate-900">PhD Candidate</h3>
+                                    <div class="text-primary font-semibold">Computer Science</div>
+                                </div>
+                                <img src="rice_logo.jpg" alt="Rice University" class="h-10 w-auto opacity-80 mix-blend-multiply">
+                            </div>
+                            <div class="mt-auto">
+                                <div class="text-slate-700 font-medium">Rice University</div>
+                                <div class="text-slate-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i> Houston, Texas</div>
+                            </div>
                         </div>
-                        <img src="rice_logo.jpg" alt="Rice University" class="h-10 w-auto opacity-80 mix-blend-multiply">
-                    </div>
-                    <div class="mt-auto">
-                        <div class="text-slate-700 font-medium">Rice University</div>
-                        <div class="text-slate-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i> Houston, Texas</div>
+
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 flex flex-col hover:border-teal-200 transition shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-lg font-bold text-slate-900">Bachelor of Science</h3>
+                                    <div class="text-primary font-semibold leading-tight">Applied & Computational Mathematics</div>
+                                </div>
+                                <img src="byu_logo.png" alt="BYU" class="h-10 w-auto opacity-80 mix-blend-multiply">
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <ul class="space-y-1">
+                                    <li class="flex items-center text-sm text-slate-600">
+                                        <i class="fas fa-check text-teal-500 mr-2 text-xs"></i> Minor: Computer Science
+                                    </li>
+                                    <li class="flex items-center text-sm text-slate-600">
+                                        <i class="fas fa-check text-teal-500 mr-2 text-xs"></i> Minor: Physics
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-auto pt-4 border-t border-slate-200">
+                                <div class="text-slate-700 font-medium">Brigham Young University</div>
+                                <div class="text-slate-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i> Provo, Utah</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 flex flex-col h-full hover:border-teal-200 transition">
-                    <div class="flex items-start justify-between mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Bachelor of Science</h3>
-                            <div class="text-primary font-semibold leading-tight">Applied & Computational Mathematics</div>
+                <div id="awards" class="lg:w-7/12 w-full">
+                    <h2 class="text-3xl font-serif font-bold text-slate-900 mb-8 flex items-center gap-3">
+                        <span class="text-primary">Honors & Awards</span>
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        
+                        <div class="bg-white p-4 rounded-lg border border-slate-100 flex items-start gap-3 hover:shadow-md transition">
+                            <div class="shrink-0 pt-1">
+                                <i class="fas fa-award text-yellow-500 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">NLM Training Program Fellowship</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">Biomedical Informatics and Data Science</p>
+                            </div>
                         </div>
-                        <img src="byu_logo.png" alt="BYU" class="h-10 w-auto opacity-80 mix-blend-multiply">
-                    </div>
-                    <div class="mt-4 mb-6">
-                        <ul class="space-y-1">
-                            <li class="flex items-center text-sm text-slate-600">
-                                <i class="fas fa-check text-teal-500 mr-2 text-xs"></i> Minor: Computer Science
-                            </li>
-                            <li class="flex items-center text-sm text-slate-600">
-                                <i class="fas fa-check text-teal-500 mr-2 text-xs"></i> Minor: Physics
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="mt-auto pt-4 border-t border-slate-200">
-                        <div class="text-slate-700 font-medium">Brigham Young University</div>
-                        <div class="text-slate-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i> Provo, Utah</div>
+
+                        <div class="bg-white p-4 rounded-lg border border-slate-100 flex items-start gap-3 hover:shadow-md transition">
+                            <div class="shrink-0 pt-1">
+                                <i class="fas fa-medal text-yellow-500 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Best Research Presentation</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">Graduate Research Seminar, Rice University</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-lg border border-slate-100 flex items-start gap-3 hover:shadow-md transition">
+                            <div class="shrink-0 pt-1">
+                                <i class="fas fa-certificate text-slate-300 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Marcellus and Shirley Burton Scholarship</h4>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-lg border border-slate-100 flex items-start gap-3 hover:shadow-md transition">
+                            <div class="shrink-0 pt-1">
+                                <i class="fas fa-certificate text-slate-300 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Academic Scholarship</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">Brigham Young University</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-lg border border-slate-100 flex items-start gap-3 hover:shadow-md transition">
+                            <div class="shrink-0 pt-1">
+                                <i class="fas fa-scroll text-slate-300 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Dean’s List</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">Brigham Young University</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-lg border border-slate-100 flex items-start gap-3 hover:shadow-md transition">
+                            <div class="shrink-0 pt-1">
+                                <i class="fas fa-star text-slate-300 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Valedictorian</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">Roy High School</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
 
-            <div id="awards">
-                <h2 class="text-3xl font-serif font-bold text-slate-900 mb-10 flex items-center gap-3">
-                    <span class="text-primary">Honors & Awards</span>
-                </h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="bg-white p-5 rounded-lg border border-slate-100 flex items-start gap-4 hover:shadow-md transition">
-                        <div class="shrink-0 pt-1">
-                            <i class="fas fa-award text-yellow-500 text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-900">NLM Training Program Fellowship</h4>
-                            <p class="text-sm text-slate-600 mt-1">Biomedical Informatics and Data Science</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-5 rounded-lg border border-slate-100 flex items-start gap-4 hover:shadow-md transition">
-                        <div class="shrink-0 pt-1">
-                            <i class="fas fa-medal text-yellow-500 text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-900">Best Research Presentation</h4>
-                            <p class="text-sm text-slate-600 mt-1">Graduate Research Seminar, Rice University</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-5 rounded-lg border border-slate-100 flex items-start gap-4 hover:shadow-md transition">
-                        <div class="shrink-0 pt-1">
-                            <i class="fas fa-certificate text-slate-300 text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-900">Marcellus and Shirley Burton Scholarship</h4>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-5 rounded-lg border border-slate-100 flex items-start gap-4 hover:shadow-md transition">
-                        <div class="shrink-0 pt-1">
-                            <i class="fas fa-certificate text-slate-300 text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-900">Academic Scholarship</h4>
-                            <p class="text-sm text-slate-600 mt-1">Brigham Young University</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-5 rounded-lg border border-slate-100 flex items-start gap-4 hover:shadow-md transition">
-                        <div class="shrink-0 pt-1">
-                            <i class="fas fa-scroll text-slate-300 text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-900">Dean’s List</h4>
-                            <p class="text-sm text-slate-600 mt-1">Brigham Young University</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-5 rounded-lg border border-slate-100 flex items-start gap-4 hover:shadow-md transition">
-                        <div class="shrink-0 pt-1">
-                            <i class="fas fa-star text-slate-300 text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-900">Valedictorian</h4>
-                            <p class="text-sm text-slate-600 mt-1">Roy High School</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -425,4 +421,3 @@ Here are the specific design changes applied to your original content:
 
 </body>
 </html>
-```
