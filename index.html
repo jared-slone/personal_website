@@ -87,38 +87,46 @@
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">STAG-LLM</h3>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">STAG-LLM: Predicting TCR-pHLA binding with protein language models and computationally generated 3D structures</h3>
                         <p class="text-slate-600 mb-4 line-clamp-3">
-                            A novel framework predicting TCR-pHLA binding by combining protein language models with computationally generated 3D structures.
+                            Background: Strong binding between T cell receptors (TCRs) and peptide–HLA (pHLA) complexes is important for triggering the adaptive immune response. Binding specificity prediction, identifying which TCRs will bind strongly to which pHLAs, can serve as a first step in designing personalized immunotherapy treatments. Existing machine learning (ML) methods to predict binding specificity rely primarily on the amino acid sequences of TCRs and pHLAs to make predictions. However, incorporating the 3D structure and geometry of the TCR-pHLA complex as an additional data modality alongside protein sequence offers a promising approach to improving ML methods for predicting TCR-pHLA binding specificity. Modern computational modeling tools present unprecedented opportunities to incorporate structure data into ML pipelines. We utilize such computational tools to incorporate 3D data into this work.
+Results: We present STAG-LLM, a multimodal ML model for predicting TCR-pHLA binding specificity that leverages sequence data and computationally generated 3D protein structures. We show that by combining a protein language model with a geometric deep learning architecture, our method outperforms existing methods even when trained on 3x smaller datasets. To further validate our model, we conduct in vitro alanine scanning experiments for four peptides and demonstrate a correlation with the attention weights learned by our model and in vitro results. We also seek to address three key challenges that arise from using computationally generated 3D structures in ML pipelines: increased inference costs arising from the need to generate 3D structures, limited training data, and robustness to noise in the generated structures.
+Conclusions: STAG-LLM shows tremendous potential for structure-based TCR-pHLA binding prediction methods, offering a foundation for further advancements in using modeled 3D structures to solve problems in immunology and proteomics. We anticipate that the usefulness of STAG-LLM and similar tools will increase in coming years as both protein structure prediction models and large language models continue to advance.
                         </p>
                         <div class="flex gap-2 mb-4">
                             <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded">Python</span>
                             <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Machine Learning</span>
                         </div>
-                        <a href="https://doi.org/10.1016/j.csbj.2025.09.004" target="_blank" class="inline-flex items-center text-primary font-medium hover:underline">
-                            View Project <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                        </a>
                     </div>
                 </article>
 
+            </div>
+        </div>
+    </section>
+
+     <section id="projects" class="py-16 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
+                <i class="fas fa-code-branch text-primary"></i> Selected Projects
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
                 <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition border border-slate-100">
                     <div class="h-48 bg-slate-200 overflow-hidden relative group">
-                        <img src="https://placehold.co/800x400/e2e8f0/475569?text=PepSim" 
-                             alt="PepSim Project" 
+                        <img src="https://placehold.co/800x400/f1f5f9/475569?text=STAG-LLM" 
+                             alt="STAG-LLM Project" 
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">PepSim</h3>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">STEGG: Structural TCR-pMHC Ensemble Generator and Gallery</h3>
                         <p class="text-slate-600 mb-4 line-clamp-3">
-                             A computational method for T-cell cross-reactivity prediction via comparison of peptide sequence and peptide-HLA structure.
+                            Understanding how T cell receptors (TCRs) recognize peptides presented by class-I major histocompatibility complexes (pMHCs) is a central challenge in immunology, with implications for infectious disease research, autoimmunity, and the development of personalized cancer immunotherapies. While recent advances in 3D protein structure prediction have enabled more accurate modeling of protein complexes, current methods fail to capture the flexible nature of TCR-pMHC interactions. Due to the high flexibility in the CDR loops of the TCR and the potential flexibility of the peptide, these interactions are dynamic and can adopt a range of energetically favorable binding modes that are not well represented by a single static structure.We introduce STEGG: Structural TCR-pMHC Ensemble Generator and Gallery, a computational framework for generating structural ensembles of TCR-pMHC complexes from amino acid sequences. STEGG generates a range of distinct low-energy 3D conformations for each TCR-pMHC pair, capturing the diversity and flexibility of TCRs, pMHCs, and their joint interactions. Unlike conventional molecular dynamics simulations, which are computationally expensive and scale poorly, STEGG utilizes a domain specific sampling algorithm, enabling efficient 3D modeling.We show that STEGG not only recovers conformations with low RMSD to experimentally solved structures but also finds a diverse range of biologically relevant binding modes and flexible poses. To support further research, we provide a publicly available database of structural ensembles for TCR-pMHC pairs.By going beyond static structure generation, STEGG presents a new way for studying the molecular drivers of TCR-pMHC interactions. 
                         </p>
                         <div class="flex gap-2 mb-4">
-                            <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded">Structural Bio</span>
-                            <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs font-semibold rounded">Immunology</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded">Python</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Machine Learning</span>
                         </div>
-                        <a href="https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2023.1108303/full" target="_blank" class="inline-flex items-center text-primary font-medium hover:underline">
-                            View Project <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                        </a>
                     </div>
                 </article>
 
