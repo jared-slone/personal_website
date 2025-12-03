@@ -27,7 +27,6 @@
             <div class="flex justify-between h-16 items-center">
                 <div class="font-bold text-xl text-slate-900 tracking-tight">Jared K. Slone</div>
                 <div class="hidden md:flex space-x-8">
-                    <!-- Changed hover:text-primary to hover:text-slate-900 for a subtle darken effect instead of color change -->
                     <a href="#about" class="text-slate-600 hover:text-slate-900 transition">About</a>
                     <a href="#projects" class="text-slate-600 hover:text-slate-900 transition">Projects</a>
                     <a href="#publications" class="text-slate-600 hover:text-slate-900 transition">Publications</a>
@@ -78,42 +77,55 @@
                 <i class="fas fa-code-branch text-primary"></i> Selected Projects
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition border border-slate-100">
+                <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition border border-slate-100 flex flex-col">
                     <div class="h-48 bg-slate-200 overflow-hidden relative group">
                         <img src="https://placehold.co/800x400/f1f5f9/475569?text=STAG-LLM" 
                              alt="STAG-LLM Project" 
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">STAG-LLM: Predicting TCR-pHLA binding with protein language models and computationally generated 3D structures</h3>
-                        <p class="text-slate-600 mb-4 line-clamp-3">
-                            Background: Strong binding between T cell receptors (TCRs) and peptide–HLA (pHLA) complexes is important for triggering the adaptive immune response. Binding specificity prediction, identifying which TCRs will bind strongly to which pHLAs, can serve as a first step in designing personalized immunotherapy treatments. Existing machine learning (ML) methods to predict binding specificity rely primarily on the amino acid sequences of TCRs and pHLAs to make predictions. However, incorporating the 3D structure and geometry of the TCR-pHLA complex as an additional data modality alongside protein sequence offers a promising approach to improving ML methods for predicting TCR-pHLA binding specificity. Modern computational modeling tools present unprecedented opportunities to incorporate structure data into ML pipelines. We utilize such computational tools to incorporate 3D data into this work.
-Results: We present STAG-LLM, a multimodal ML model for predicting TCR-pHLA binding specificity that leverages sequence data and computationally generated 3D protein structures. We show that by combining a protein language model with a geometric deep learning architecture, our method outperforms existing methods even when trained on 3x smaller datasets. To further validate our model, we conduct in vitro alanine scanning experiments for four peptides and demonstrate a correlation with the attention weights learned by our model and in vitro results. We also seek to address three key challenges that arise from using computationally generated 3D structures in ML pipelines: increased inference costs arising from the need to generate 3D structures, limited training data, and robustness to noise in the generated structures.
-Conclusions: STAG-LLM shows tremendous potential for structure-based TCR-pHLA binding prediction methods, offering a foundation for further advancements in using modeled 3D structures to solve problems in immunology and proteomics. We anticipate that the usefulness of STAG-LLM and similar tools will increase in coming years as both protein structure prediction models and large language models continue to advance.
-                        </p>
-                        <div class="flex gap-2 mb-4">
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded">Python</span>
-                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Machine Learning</span>
+                    <div class="p-6 flex flex-col h-full justify-between">
+                        <h3 class="text-lg font-bold text-slate-900 mb-4">
+                            STAG-LLM: Predicting TCR-pHLA binding with protein language models
+                        </h3>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded border border-blue-100">Deep Learning</span>
+                            <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded border border-indigo-100">Structural Biology</span>
                         </div>
                     </div>
                 </article>
                 
-                <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition border border-slate-100">
+                <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition border border-slate-100 flex flex-col">
                     <div class="h-48 bg-slate-200 overflow-hidden relative group">
-                        <img src="https://placehold.co/800x400/f1f5f9/475569?text=STAG-LLM" 
+                        <img src="https://placehold.co/800x400/f1f5f9/475569?text=STEGG" 
                              alt="STEGG Project" 
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">STEGG: Structural TCR-pMHC Ensemble Generator and Gallery</h3>
-                        <p class="text-slate-600 mb-4 line-clamp-3">
-                            Understanding how T cell receptors (TCRs) recognize peptides presented by class-I major histocompatibility complexes (pMHCs) is a central challenge in immunology, with implications for infectious disease research, autoimmunity, and the development of personalized cancer immunotherapies. While recent advances in 3D protein structure prediction have enabled more accurate modeling of protein complexes, current methods fail to capture the flexible nature of TCR-pMHC interactions. Due to the high flexibility in the CDR loops of the TCR and the potential flexibility of the peptide, these interactions are dynamic and can adopt a range of energetically favorable binding modes that are not well represented by a single static structure.We introduce STEGG: Structural TCR-pMHC Ensemble Generator and Gallery, a computational framework for generating structural ensembles of TCR-pMHC complexes from amino acid sequences. STEGG generates a range of distinct low-energy 3D conformations for each TCR-pMHC pair, capturing the diversity and flexibility of TCRs, pMHCs, and their joint interactions. Unlike conventional molecular dynamics simulations, which are computationally expensive and scale poorly, STEGG utilizes a domain specific sampling algorithm, enabling efficient 3D modeling.We show that STEGG not only recovers conformations with low RMSD to experimentally solved structures but also finds a diverse range of biologically relevant binding modes and flexible poses. To support further research, we provide a publicly available database of structural ensembles for TCR-pMHC pairs.By going beyond static structure generation, STEGG presents a new way for studying the molecular drivers of TCR-pMHC interactions. 
-                        </p>
-                        <div class="flex gap-2 mb-4">
-                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded">Python</span>
-                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Machine Learning</span>
+                    <div class="p-6 flex flex-col h-full justify-between">
+                        <h3 class="text-lg font-bold text-slate-900 mb-4">
+                            STEGG: Structural TCR-pMHC Ensemble Generator and Gallery
+                        </h3>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-semibold rounded border border-purple-100">Immunology</span>
+                            <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded border border-indigo-100">Structural Biology</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition border border-slate-100 flex flex-col">
+                    <div class="h-48 bg-slate-200 overflow-hidden relative group">
+                        <img src="https://placehold.co/800x400/f1f5f9/475569?text=Covid-19+AI" 
+                             alt="Covid-19 AI Project" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-6 flex flex-col h-full justify-between">
+                        <h3 class="text-lg font-bold text-slate-900 mb-4">
+                            Covid-19 Diagnostic AI
+                        </h3>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded border border-blue-100">Deep Learning</span>
+                            <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-semibold rounded border border-green-100">Diagnostics</span>
                         </div>
                     </div>
                 </article>
@@ -136,7 +148,6 @@ Conclusions: STAG-LLM shows tremendous potential for structure-based TCR-pHLA bi
                         <div class="space-y-6 w-full">
 
                             <div class="border-t border-slate-100 pt-6">
-                                <!-- Removed group-hover:text-primary -->
                                 <h4 class="text-lg font-bold text-slate-900">
                                     STEGG: Structural TCR-pMHC Ensemble Generator and Gallery
                                 </h4>
@@ -149,7 +160,6 @@ Conclusions: STAG-LLM shows tremendous potential for structure-based TCR-pHLA bi
                             </div>
                             
                             <div>
-                                <!-- Removed group-hover:text-primary -->
                                 <h4 class="text-lg font-bold text-slate-900">
                                     STAG-LLM: Predicting TCR-pHLA binding with protein language models and computationally generated 3D structures
                                 </h4>
@@ -162,7 +172,6 @@ Conclusions: STAG-LLM shows tremendous potential for structure-based TCR-pHLA bi
                             </div>
 
                             <div class="border-t border-slate-100 pt-6">
-                                <!-- Removed group-hover:text-primary -->
                                 <h4 class="text-lg font-bold text-slate-900">
                                     TCR-pMHC Binding Specificity Prediction from Structure Using Graph Neural Networks
                                 </h4>
@@ -175,7 +184,6 @@ Conclusions: STAG-LLM shows tremendous potential for structure-based TCR-pHLA bi
                             </div>
 
                             <div class="border-t border-slate-100 pt-6">
-                                <!-- Removed group-hover:text-primary -->
                                 <h4 class="text-lg font-bold text-slate-900">
                                     Time-lapse analysis of TCR-T cells highlights heterogeneity and kinetics of responses upon antigen stimulation
                                 </h4>
@@ -197,7 +205,6 @@ Conclusions: STAG-LLM shows tremendous potential for structure-based TCR-pHLA bi
                         <div class="space-y-6 w-full">
                             
                             <div>
-                                <!-- Removed group-hover:text-primary -->
                                 <h4 class="text-lg font-bold text-slate-900">
                                     Unbiased microfluidic isolation of antigen-specific T cells in solid tumors
                                 </h4>
@@ -210,7 +217,6 @@ Conclusions: STAG-LLM shows tremendous potential for structure-based TCR-pHLA bi
                             </div>
 
                             <div class="border-t border-slate-100 pt-6">
-                                <!-- Removed group-hover:text-primary -->
                                 <h4 class="text-lg font-bold text-slate-900">
                                     T cell receptor engineering targeting EGFR-mutant non-small cell lung cancer
                                 </h4>
@@ -230,7 +236,6 @@ Conclusions: STAG-LLM shows tremendous potential for structure-based TCR-pHLA bi
                     <div class="flex flex-col sm:flex-row gap-4">
                         <div class="sm:w-32 shrink-0 text-sm font-bold text-slate-400 pt-1">2023</div>
                         <div class="w-full">
-                            <!-- Removed group-hover:text-primary -->
                             <h4 class="text-lg font-bold text-slate-900">
                                 PepSim: T-cell cross-reactivity prediction via comparison of peptide sequence and peptide-HLA structure
                             </h4>
@@ -250,7 +255,6 @@ Conclusions: STAG-LLM shows tremendous potential for structure-based TCR-pHLA bi
                         <div class="space-y-6 w-full">
                             
                             <div>
-                                <!-- Removed group-hover:text-primary -->
                                 <h4 class="text-lg font-bold text-slate-900">
                                     Using generative adversarial networks to produce knots with specified invariants
                                 </h4>
@@ -263,7 +267,6 @@ Conclusions: STAG-LLM shows tremendous potential for structure-based TCR-pHLA bi
                             </div>
                             
                             <div class="border-t border-slate-100 pt-6">
-                                <!-- Removed group-hover:text-primary -->
                                 <h4 class="text-lg font-bold text-slate-900">
                                     Using deep learning to generate knots with prescribed invariants
                                 </h4>
@@ -276,7 +279,6 @@ Conclusions: STAG-LLM shows tremendous potential for structure-based TCR-pHLA bi
                             </div>
 
                              <div class="border-t border-slate-100 pt-6">
-                                <!-- Removed group-hover:text-primary -->
                                 <h4 class="text-lg font-bold text-slate-900">
                                     Physics-informed deep learning with uncertainty quantification for weapons radiography
                                 </h4>
